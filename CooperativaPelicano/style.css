@@ -1,0 +1,222 @@
+/* style.css - Estilo Stardew Valley Completo con Imagen de Fondo */
+
+/* Paleta de Colores Stardew Valley (ejemplos)
+   ------------------------------------------
+   #3C6A2E (Verde Oscuro - Vegetación)
+   #5A994A (Verde Claro - Césped)
+   #8B5C3B (Marrón - Madera/Tierra)
+   #B88B5F (Marrón Claro - Arena/Paja)
+   #F7F1E5 (Crema/Blanco Roto - Papel/Interfaz)
+   #3F68A3 (Azul - Agua/Cielo)
+   #B33939 (Rojo - Mineral/Peligro)
+   #E3BE2B (Amarillo - Oro/Cosecha)
+*/
+
+/* 1. Fondo General y Fuente */
+body {
+    /* Fuente que imita el estilo pixelado o rústico */
+    font-family: "Lucida Console", "Courier New", monospace, serif;
+    color: #4a4a4a; /* Gris oscuro para el texto principal por defecto */
+    
+    /* Imagen de fondo de Stardew Valley */
+    background-image: url('img/stardew_farm_bg.jpg');
+    background-size: cover; /* Cubre todo el área sin distorsionar */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    background-repeat: no-repeat;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 2. Contenedores Principales (Tarjetas de Contenido) */
+.wrapper {
+    max-width: 900px; /* Ancho máximo para el contenido principal */
+    margin: 30px auto; /* Centrar y dar un poco más de margen vertical */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semi-transparente para leer mejor */
+    border: 3px solid #8B5C3B; /* Borde rústico marrón */
+    box-shadow: 8px 8px 0px 0px #3C6A2E; /* Sombra verde que simula un borde exterior pixelado */
+    border-radius: 5px; /* Ligeros bordes redondeados */
+    text-align: left; /* Alineación del texto dentro del wrapper */
+}
+
+/* 3. Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    color: #3C6A2E; /* Verde oscuro principal para encabezados */
+    text-shadow: 1px 1px 0px #F7F1E5; /* Ligera sombra para que resalte */
+    border-bottom: 2px dashed #8B5C3B; /* Línea separadora rústica */
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* 4. Estilo de Botones */
+.btn {
+    border: none;
+    border-radius: 3px; /* Ligeramente redondeado para suavizar */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.3); /* Sombra más pronunciada para efecto 3D */
+    margin: 8px;
+    transition: all 0.1s ease-in-out;
+    letter-spacing: 0.5px;
+    font-family: "Lucida Console", "Courier New", monospace, serif; /* Asegura la fuente en botones */
+}
+
+.btn:hover {
+    transform: translateY(-1px); /* Efecto de levitación sutil */
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.4);
+}
+
+.btn:active {
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+    transform: translate(3px, 3px); /* Efecto "hundido" */
+}
+
+/* Paleta de colores para botones */
+.btn-success { /* Añadir, Guardar (Verde) */
+    background-color: #3C6A2E;
+    color: #F7F1E5;
+    border-bottom: 3px solid #2A481F; /* Borde más oscuro */
+}
+
+.btn-primary { /* Acceder, Registrar Venta (Azul) */
+    background-color: #3F68A3;
+    color: #F7F1E5;
+    border-bottom: 3px solid #2B466F;
+}
+
+.btn-secondary { /* Cancelar, Volver (Marrón) */
+    background-color: #8B5C3B;
+    color: #F7F1E5;
+    border-bottom: 3px solid #63412B;
+}
+
+.btn-danger { /* Eliminar (Rojo) */
+    background-color: #B33939;
+    color: #F7F1E5;
+    border-bottom: 3px solid #8A2A2A;
+}
+
+/* 5. Estilo de Tablas */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Elimina espacio entre celdas */
+    border: 2px solid #8B5C3B; /* Borde general de la tabla */
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.2);
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #B88B5F; /* Bordes internos más claros */
+}
+
+.table th {
+    background-color: #3C6A2E; /* Cabeceras verde oscuro */
+    color: #F7F1E5;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F7F1E5; /* Color crema claro para filas impares */
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #FFFFFF; /* Blanco para filas pares */
+}
+
+.table tbody tr:hover {
+    background-color: #E3BE2B; /* Amarillo dorado al pasar el ratón */
+    color: #3C6A2E;
+    cursor: pointer;
+}
+
+/* 6. Estilo de Formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #3C6A2E; /* Verde oscuro para etiquetas */
+    display: block; /* Para que la etiqueta esté en su propia línea */
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border: 2px solid #8B5C3B; /* Borde marrón rústico */
+    border-radius: 3px;
+    padding: 10px 12px;
+    background-color: #fffaf0; /* Fondo ligeramente amarillento */
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #4a4a4a;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho */
+}
+
+.form-control:focus {
+    border-color: #3F68A3; /* Borde azul al enfocar */
+    box-shadow: 0 0 5px rgba(63, 104, 163, 0.5); /* Sombra suave */
+    outline: none; /* Elimina el contorno por defecto del navegador */
+}
+
+.invalid-feedback {
+    color: #B33939; /* Rojo para errores de validación */
+    font-weight: bold;
+    margin-top: 5px;
+    display: block; /* Asegura que el mensaje de error se muestre */
+}
+
+/* 7. Alertas y Mensajes */
+.alert {
+    border-radius: 3px;
+    border: 2px solid;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.alert-success {
+    background-color: #d4edc4; /* Verde claro */
+    color: #1a561a; /* Texto verde oscuro */
+    border-color: #3C6A2E;
+}
+
+.alert-danger, .alert-warning {
+    background-color: #f7d7d7; /* Rojo claro */
+    color: #8A2A2A; /* Texto rojo oscuro */
+    border-color: #B33939;
+}
+
+/* Estilo para los iconos Font Awesome */
+.fa {
+    color: #3F68A3; /* Azul para iconos */
+    margin-right: 5px;
+    font-size: 1.1em;
+}
+
+/* Estilo para la lista de enlaces en index.php */
+.list-group-item {
+    background-color: #F7F1E5;
+    border: 1px solid #B88B5F;
+    color: #3C6A2E;
+    margin-bottom: 5px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+}
+
+.list-group-item:hover {
+    background-color: #E3BE2B;
+    color: #8B5C3B;
+    border-color: #8B5C3B;
+    transform: translateX(5px);
+}
